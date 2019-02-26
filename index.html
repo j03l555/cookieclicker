@@ -2,7 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Unsurprisingly, this website uses cookies for ads and traffic analysis.","dismiss":"Got it!","learnMore":"Learn more","link":"http://orteil.dashnet.org/cookieconsentpolicy.html","target":"_blank","theme":"http://orteil.dashnet.org/cookieconsent.css","domain":"dashnet.org"};
+</script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115293259-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -12,22 +15,21 @@
   gtag('config', 'UA-115293259-1');
 </script>
 
-<script src="/cdn-cgi/apps/head/0qgk9sTk1hPaj4RmmbOPMlTGE6w.js"></script><script type="text/javascript">
-    window.cookieconsent_options = {"message":"Unsurprisingly, this website uses cookies for ads and traffic analysis. :).","dismiss":"Got it!","learnMore":"Learn more","link":"http://orteil.dashnet.org/cookieconsentpolicy.html","target":"_blank","theme":"http://orteil.dashnet.org/cookieconsent.css","domain":"dashnet.org"};
-</script>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
 
 <title>Cookie Clicker</title>
 <!--
-Code and graphics copyright Orteil, 2013-2017
+Code and graphics copyright Orteil, 2013-2018
 Feel free to alter this code to your liking, but please do not re-host it, do not profit from it and do not present it as your own.
 -->
 
 <link rel="shortcut icon" href="img/favicon.ico" />
 <!--<link href="https://fonts.googleapis.com/css?family=Kavoon&subset=latin,latin-ext" rel="stylesheet" type="text/css">-->
 <link href='https://fonts.googleapis.com/css?family=Merriweather:900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link href="style.css?v=2.0042" rel="stylesheet" type="text/css">
+<script src="base64.js"></script>
+<script src="main.js?v=2.041"></script>
+<link href="style.css?v=2.039" rel="stylesheet" type="text/css">
 <!--[if IE]>
 <style type="text/css">
 	#ifIE9{display:block;}
@@ -46,16 +48,13 @@ target-densityDpi=device-dpi"/>
 <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=250, height=device-height, target-densitydpi=device-dpi"/>-->
 
 <!--[if lt IE9]><script src="excanvas.compiled.js"></script><![endif]-->
-<script src="base64.js"></script>
-<script src="ajax.js"></script>
-<script src="https://ozh.github.io/cookieclicker/main.js?v=2.0042"></script>
 
 </head>
 <body>
 
 <div id="wrapper">
 
-	<div id="topBar">
+<div id="topBar">
 		<div><b>MK Unblocked Cookie Clicker</b>&trade; &copy; <a href="http://orteil.dashnet.org" target="_blank">Orteil</a>, 2017 - <a href="http://dashnet.org" target="_blank">DashNet</a></div>
 		<div><font size="3"><b><font color="#1766e7">Check out MK unblocked Agar.io </font><a href="https://sites.google.com/site/officialmkgames/beta-mk-agar-io" target="" style=""><font color="#9900ff">HERE!!</font></a></b></font></div>
 		<div><a href="http://twitter.com/orteil42" target="_blank">twitter</a></div>
@@ -133,7 +132,7 @@ target-densityDpi=device-dpi"/>
 			<div id="comments" class="inset title">
 				<div id="prefsButton" class="button">Options</div>
 				<div id="statsButton" class="button">Stats</div>
-				<div id="logButton" class="button">Info</div>
+				<div id="logButton" class="button"><div id="checkForUpdate">New update!</div>Info</div>
 				<div id="legacyButton" class="button">Legacy<div id="ascendMeterContainer" class="smallFramed meterContainer"><div id="ascendMeter" class="meter filling"></div></div><div class="roundedPanel" id="ascendNumber"></div><div id="ascendTooltip" class="framed"></div></div>
 				<div id="commentsTextBelow" class="commentsText"></div>
 				<div id="commentsText" class="commentsText"></div>
@@ -141,8 +140,10 @@ target-densityDpi=device-dpi"/>
 			</div>
 			<div id="centerArea">
 				<div id="buildingsTitle" class="inset title zoneTitle">Buildings</div>
+				<div id="buildingsMaster"></div>
 				<div id="rows"></div>
 				<div id="menu"></div>
+				<!--
 				<div id="donateBox">
 					<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donate" style="margin:0px 16px;">
 					<input type="hidden" name="cmd" value="_s-xclick">
@@ -150,8 +151,9 @@ target-densityDpi=device-dpi"/>
 					<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
 					<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
 					</form>
-					Help us keep developing the game!
+					<small>Help us keep developing the game!</small>
 				</div>
+				-->
 			</div>
 		</div>
 
@@ -160,44 +162,35 @@ target-densityDpi=device-dpi"/>
 				<div id="storeTitle" class="inset title zoneTitle">Store</div>
 				<div id="toggleUpgrades" class="storeSection upgradeBox"></div>
 				<div id="techUpgrades" class="storeSection upgradeBox"></div>
+				<div id="vaultUpgrades" class="storeSection upgradeBox"></div>
 				<div id="upgrades" class="storeSection upgradeBox"></div>
 				<div id="products" class="storeSection"></div>
 			</div>
 			
-			
 			<div id="support" style="margin-top:130px;">
-			<div><font size="3"><b><font color="#1766e7">Check out MK unblocked Agar.io </font><a href="https://sites.google.com/site/officialmkgames/beta-mk-agar-io" target="" style=""><font color="#9900ff">HERE!!</font></a></b></font></div>
+				<div class="supportComment">Sponsored links</div>
 				<div style="position:relative;">
 				
 					<div style="position:relative;z-index:100;min-height:250px;">
 					
-						<!-- Google ad -->
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- Cookie Clicker Rectangle -->
+						<!-- Cookie Clicker Responsive -->
 						<ins class="adsbygoogle"
-							 style="display:inline-block;width:300px;height:250px"
+							 style="display:block"
 							 data-ad-client="ca-pub-8491708950677704"
-							 data-ad-slot="9349826096"></ins>
+							 data-ad-slot="9780186019"
+							 data-ad-format="auto"
+							 data-full-width-responsive="true"></ins>
 						<script>
 						(adsbygoogle = window.adsbygoogle || []).push({});
 						</script>
 						
 						<div style="height:16px;"></div>
 						
-						<!-- Google ad -->
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- Cookie Clicker Rectangle -->
-						<ins class="adsbygoogle"
-							 style="display:inline-block;width:300px;height:250px"
-							 data-ad-client="ca-pub-8491708950677704"
-							 data-ad-slot="9349826096"></ins>
-						<script>
-						(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
+						<!-- AdventureQuest Worlds banner -->
+						<a class="ad" id="aqad" href="http://www.aq.com/landing/cookie/?utm_campaign=AQW_CookieClicker&utm_source=CookieClicker" target="_blank" title="AdventureQuest Worlds" style="background:url(img/aqworldsbanner.jpg) no-repeat;width:300px;height:64px;display:block;position:relative;margin:0px auto;">
+						</a>
 						
-						<div style="height:16px;"></div>
-						
- <script data-cfasync='false' type='text/javascript' src='//p292345.clksite.com/adServe/banners?tid=292345_567790_4'></script>
 					</div>
 					
 				</div>
@@ -209,10 +202,17 @@ target-densityDpi=device-dpi"/>
 			<div class="supportComment">Sponsored links</div>
 			<div style="position:relative;">
 				<div class="supportPlaceholder">
+					<div>(Normally, there would be an ad here. It's fine if you want to block it, but remember - Cookie Clicker only happens because of ad revenue!)</div>
 				</div>
 				<div style="position:relative;z-index:100;">
-					<div style="font-size:13.3333px"><b><font size="3"><a href="https://sites.google.com/site/officialmkgames/home/chat" target="_blank">Feel Free to use the MK games chat!</a></font></b></div>
-    <div style="font-size:13.3333px"><b><a href="https://hangouts.google.com/group/4V1BdQCDTDjr6Gws2" target="_blank">Or join the MK Games Hangout Group</a></b></div>
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<ins class="adsbygoogle"
+						 style="display:inline-block;width:160px;height:600px"
+						 data-ad-client="ca-pub-8491708950677704"
+						 data-ad-slot="8643839697"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
 				</div>
 			</div>
 		
@@ -236,16 +236,6 @@ target-densityDpi=device-dpi"/>
 	</div>
 
 </div>
-<script>// set interval
-var tid = setInterval(mycode, 10000);
-function mycode() {
-  gtag('js', new Date());
 
-  gtag('config', 'UA-115293259-1');
-}
-function abortTimer() { // to be called when you want to stop the timer
-  clearInterval(tid);
-}
-</script>
-<div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;'><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"  alt="www.000webhost.com"></a></div></body>
+</body>
 </html>
