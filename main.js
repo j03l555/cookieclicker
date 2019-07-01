@@ -1128,6 +1128,7 @@ Game.Launch=function()
 			console.log('You are playing a modded version of cookie clicker.');
 			console.log('Modded by J03L | Joel | Mad Hacker | The Awesomer | joelastley555 (yes i am known by ALL of these different names.)');
 			console.log('========================================================');
+			Game.Notify('Cookie Clicker !!MODDED!!','Debug mode and party mode have been enabled. Modded by joelastley555.',[25,7]);
 		}
 		Game.bakeryNamePrompt=function()
 		{
