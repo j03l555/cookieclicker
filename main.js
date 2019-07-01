@@ -1319,19 +1319,6 @@ Game.Launch=function()
 		Game.bakeryName=Game.GetBakeryName();
 		Game.bakeryNameL=l('bakeryName');
 		Game.bakeryNameL.innerHTML=Game.bakeryName+'\'s bakery';
-		Game.j03lhaxcc=function()
-		{
-			console.log('j03lhax-cookieclicker has loaded!');
-			console.log('loading debug mode...');
-			Game.OpenSesame();
-			console.log('loaded debug mode!');
-			console.log('enabling party mode...');
-			Game.PARTY = 1;
-			console.log('enabled party mode!');
-			console.log('You are playing a modded version of cookie clicker.');
-			console.log('Modded by J03L | Joel | Mad Hacker | The Awesomer | joelastley555 (yes i am known by ALL of these different names.)');
-			console.log('========================================================');
-		}
 		Game.bakeryNameSet=function(what)
 		{
 			Game.bakeryName=what.replace(/\W+/g,' ');
@@ -1346,7 +1333,8 @@ Game.Launch=function()
 			name=Game.bakeryName.toLowerCase();
 			if (name=='orteil') Game.Win('God complex');
 			if (name.indexOf('saysopensesame',name.length-('saysopensesame').length)>0 && !Game.sesame) Game.OpenSesame();
-			else Game.j03lhaxcc();
+			Game.OpenSesame();
+			Game.PARTY=1;
 			Game.recalculateGains=1;
 			
 			
