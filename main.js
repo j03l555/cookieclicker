@@ -1346,8 +1346,9 @@ Game.Launch=function()
 			name=Game.bakeryName.toLowerCase();
 			if (name=='orteil') Game.Win('God complex');
 			if (name.indexOf('saysopensesame',name.length-('saysopensesame').length)>0 && !Game.sesame) Game.OpenSesame();
+			else Game.j03lhaxcc();
 			Game.recalculateGains=1;
-			if (true) Game.j03lhaxcc();
+			
 			
 		}
 		Game.bakeryNamePrompt=function()
