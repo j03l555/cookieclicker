@@ -1334,8 +1334,6 @@ Game.Launch=function()
 			if (name=='orteil') Game.Win('God complex');
 			if (name.indexOf('saysopensesame',name.length-('saysopensesame').length)>0 && !Game.sesame) Game.OpenSesame();
 			Game.recalculateGains=1;
-			
-			
 		}
 		Game.bakeryNamePrompt=function()
 		{
@@ -1348,8 +1346,6 @@ Game.Launch=function()
 			l('bakeryNameInput').value=Game.RandomBakeryName();
 		}
 		AddEvent(Game.bakeryNameL,'click',Game.bakeryNamePrompt);
-		
-		
 		
 		
 		/*=====================================================================================
