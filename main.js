@@ -10745,7 +10745,7 @@ Game.Launch=function()
 		{
 			a = document.getElementById("dev_txtin_test1");
 			b = document.getElementById("dev_txtin_test2");
-			Game.Notify(a.value,b.value,[25,7]);
+			Game.Notify(document.getElementById("dev_txtin_test1").value,document.getElementById("dev_txtin_test2").value,[25,7]);
 		}
 		Game.OpenSesame=function()
 		{
