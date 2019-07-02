@@ -10783,11 +10783,10 @@ Game.Launch=function()
 			str+='</div>';
 			str+='<a class="option neato" '+Game.clickStr+'="Game.PARTY=1;">PARTY MODE!!!</a>';
 			str+='<a class="option neato" '+Game.clickStr+'="Game.PARTY=0;">Lame mode</a>';
-			str+='</div>';
 			str+='<input type="text" id="dev_txtin_test1"></input>';
 			str+='<input type="text" id="dev_txtin_test2"></input>';
-			str+='</div>';
 			str+='<a class="option neato" '+Game.clickStr+'="Game.Notify(document.getElementById('dev_txtin_test1').value,document.getElementById('dev_txtin_test2').value,[25,7]);">Notify text</a>';
+			str+='</div>';
 			
 			l('devConsole').innerHTML=str;
 			l('debug').style.display='block';
