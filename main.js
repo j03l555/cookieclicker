@@ -10781,6 +10781,8 @@ Game.Launch=function()
 				//str+='<a class="option neato" '+Game.clickStr+'="Game.goldenCookie.click(0,\''+Game.goldenCookie.choices[i*2+1]+'\');">'+Game.goldenCookie.choices[i*2]+'</a>';
 			}
 			str+='</div>';
+			str+='<a class="option warning" '+Game.clickStr+'="Game.PARTY=1;">PARTY!!!</a>';
+			str+='</div>';
 			
 			l('devConsole').innerHTML=str;
 			l('debug').style.display='block';
