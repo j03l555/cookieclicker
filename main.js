@@ -10741,6 +10741,12 @@ Game.Launch=function()
 		
 		Game.debugTimersOn=0;
 		Game.sesame=0;
+		Game.test7031=function()
+		{
+			a = document.getElementById("dev_txtin_test1");
+			b = document.getElementById("dev_txtin_test2");
+			Game.Notify(a.value,b.value,[25,7]);
+		}
 		Game.OpenSesame=function()
 		{
 			var str='';
@@ -10785,7 +10791,7 @@ Game.Launch=function()
 			str+='<a class="option neato" '+Game.clickStr+'="Game.PARTY=0;">Lame mode</a>';
 			str+='<input type="text" id="dev_txtin_test1"></input>';
 			str+='<input type="text" id="dev_txtin_test2"></input>';
-			str+='<a class="option neato" '+Game.clickStr+'="a = document.getElementById(dev_txtin_test1);b = document.getElementById(dev_txtin_test2);Game.Notify(a.value,b.value,[25,7]);">Notify text</a>';
+			str+='<a class="option neato" '+Game.clickStr+'="Game.test7031();">Notify text</a>';
 			str+='</div>';
 			
 			l('devConsole').innerHTML=str;
