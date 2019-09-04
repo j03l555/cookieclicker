@@ -13,6 +13,14 @@ BETA=0;
 /*=====================================================================================
 MISC HELPER FUNCTIONS
 =======================================================================================*/
+
+//added by joelastley555 for debugging purposes.
+function dp(out)
+{
+	//Log Debug info to Console.
+	console.log("[DEBUG]: ".concat(out))
+}
+
 function l(what) {return document.getElementById(what);}
 function choose(arr) {return arr[Math.floor(Math.random()*arr.length)];}
 
@@ -853,6 +861,7 @@ Game.Launch=function()
 	Game.Load=function()
 	{
 		//l('javascriptError').innerHTML='<div style="padding:64px 128px;"><div class="title">Loading...</div></div>';
+		dp("Game.Load function called, Loading game...");
 		Game.Loader=new Loader();
 		Game.Loader.domain='img/';
 		Game.Loader.loaded=Game.Init;
@@ -860,16 +869,18 @@ Game.Launch=function()
 	}
 	Game.ErrorFrame=function()
 	{
-		l('javascriptError').innerHTML=
-		'<div class="title">Oops. Wrong address!</div>'+
-		'<div>It looks like you\'re accessing Cookie Clicker from another URL than the official one.<br>'+
-		'You can <a href="http://orteil.dashnet.org/cookieclicker/" target="_blank">play Cookie Clicker over here</a>!<br>'+
-		'<small>(If for any reason, you are unable to access the game on the official URL, we are currently working on a second domain.)</small></div>';
+		//l('javascriptError').innerHTML=
+		//'<div class="title">Oops. Wrong address!</div>'+
+		//'<div>It looks like you\'re accessing Cookie Clicker from another URL than the official one.<br>'+
+		//'You can <a href="http://orteil.dashnet.org/cookieclicker/" target="_blank">play Cookie Clicker over here</a>!<br>'+
+		//'<small>(If for any reason, you are unable to access the game on the official URL, we are currently working on a second domain.)</small></div>';
+		dp("ErrorFrame Function was called, ignoring.");
 	}
 	
 	
 	Game.Init=function()
 	{
+		dp("Game.Init function called, initializing game...");
 		Game.ready=1;
 
 		/*=====================================================================================
