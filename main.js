@@ -1136,14 +1136,18 @@ Game.Launch=function()
 			//dp('enabling party mode...');
 			//Game.PARTY = 1;
 			//dp('enabled party mode!');
-			console.log('    _____');
-			console.log('   / ____');
-			console.log('  / /');
+			console.log('========================================================');
+			console.log(' ');
+			console.log('     _____   _____');
+			console.log('   /  ___/ /  ___/');
+			console.log('  / /___  / /___');
+			console.log(' /_____/ /_____/');
+			console.log(' ');
 			console.log('========================================================');
 			console.log('You are playing a modded version of cookie clicker.');
 			console.log('Modded by J03L | Joel | Mad Hacker | The Awesomer | joelastley555 (yes i am known by ALL of these different names.)');
 			console.log('========================================================');
-			Game.Notify('Cookie Clicker !!MODDED!!','Debug mode and party mode have been enabled. Modded by joelastley555.',[25,7]);
+			Game.Notify('Cookie Clicker !!MODDED!!','Debug mode has been enabled. Modded by joelastley555.',[25,7]);
 		}
 		Game.bakeryNamePrompt=function()
 		{
